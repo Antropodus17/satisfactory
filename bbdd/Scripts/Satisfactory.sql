@@ -17,7 +17,6 @@ CONSTRAINT UQ_ESTRUCTURA_nombre UNIQUE (nombre)
 --TABLA GENERADOR
 CREATE TABLE GENERADOR(
 cod_generador SMALLINT NOT NULL,
-produccion SMALLINT NOT NULL,
 overclok tinyint NOT NULL
 
 CONSTRAINT PK_GENERADOR_cod_generador PRIMARY KEY (cod_generador)
@@ -27,10 +26,9 @@ CONSTRAINT PK_GENERADOR_cod_generador PRIMARY KEY (cod_generador)
 --TABLA EXTRACTOR
 CREATE TABLE EXTRACTOR(
 cod_extractor SMALLINT NOT NULL,
-id_producto_extraido SMALLINT NOT NULL,
+/*id_producto_extraido SMALLINT NOT NULL,
 cantidad_extraida SMALLINT NOT NULL,
-unidad char(2) NOT NULL,
-produccion SMALLINT NOT NULL,
+unidad char(2) NOT NULL,*/
 overclok tinyint NOT NULL
 
 CONSTRAINT PK_EXTRACTOR_cod_extractor PRIMARY KEY (cod_extractor)
@@ -39,7 +37,6 @@ CONSTRAINT PK_EXTRACTOR_cod_extractor PRIMARY KEY (cod_extractor)
 --TABLA PRODUCTOR
 CREATE TABLE PRODUCTOR(
 cod_productor SMALLINT NOT NULL,
-produccion SMALLINT NOT NULL,
 overclok tinyint NOT NULL--REVISAR***********/
 
 CONSTRAINT PK_PRODUCTOR_cod_productor PRIMARY KEY (cod_productor)
@@ -88,14 +85,6 @@ CREATE TABLE TRANSPORTADOR(
 cod_transportador SMALLINT NOT NULL
 
 CONSTRAINT PK_TRANSPORTADOR_cod_transportador PRIMARY KEY(cod_transportador)
-);
-
---TABLA SOPORTE
-
-CREATE TABLE SOPORTE(
-cod_soporte SMALLINT NOT NULL
-
-CONSTRAINT PK_SOPORTE_cod_soporte PRIMARY KEY(cod_soporte)
 );
 
 
