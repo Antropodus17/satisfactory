@@ -1,0 +1,121 @@
+
+--/*********CREACION DE TABLAS******/
+
+--/***ESTRUCTURA***/
+
+
+--TABLA ESTRUCTURA
+CREATE TABLE ESTRUCTURA(
+codigo SMALLINT NOT NULL,
+nombre varchar(30) NOT NULL,
+categoria varchar(20) NOT NULL
+
+CONSTRAINT PK_ESTRUCTURA_codigo PRIMARY KEY (codigo),
+CONSTRAINT UQ_ESTRUCTURA_nombre UNIQUE (nombre)
+);
+
+--TABLA GENERADOR
+CREATE TABLE GENERADOR(
+cod_generador SMALLINT NOT NULL,
+produccion SMALLINT NOT NULL,
+overclok tinyint NOT NULL
+
+CONSTRAINT PK_GENERADOR_cod_generador PRIMARY KEY (cod_generador)
+);
+
+
+--TABLA EXTRACTOR
+CREATE TABLE EXTRACTOR(
+cod_extractor SMALLINT NOT NULL,
+id_producto_extraido SMALLINT NOT NULL,
+cantidad_extraida SMALLINT NOT NULL,
+unidad char(2) NOT NULL,
+produccion SMALLINT NOT NULL,
+overclok tinyint NOT NULL
+
+CONSTRAINT PK_EXTRACTOR_cod_extractor PRIMARY KEY (cod_extractor)
+);
+
+--TABLA PRODUCTOR
+CREATE TABLE PRODUCTOR(
+cod_productor SMALLINT NOT NULL,
+produccion SMALLINT NOT NULL,
+overclok tinyint NOT NULL--REVISAR***********/
+
+CONSTRAINT PK_PRODUCTOR_cod_productor PRIMARY KEY (cod_productor)
+);
+
+--TABLA ESPECIAL
+CREATE TABLE ESPECIAL(
+cod_especial SMALLINT NOT NULL
+
+CONSTRAINT PK_ESPECIAL_cod_especial PRIMARY KEY (cod_especial)
+);
+
+--TABLA ESTACIONES_TRABAJO
+CREATE TABLE ESTACIONES_TRABAJO(
+cod_estaciones_trabajo SMALLINT NOT NULL
+
+CONSTRAINT PK_ESTACIONES_TRABAJO_cod_estaciones_trabajo PRIMARY KEY (cod_estaciones_trabajo)
+);
+
+--TABLA ALMACENAMIENTO
+CREATE TABLE ALMACENAMIENTO(
+cod_almacenamiento SMALLINT NOT NULL,
+capacidad TINYINT NOT NULL
+
+CONSTRAINT PK_ALMACENAMIENTO_cod_almacenamiento PRIMARY KEY(cod_almacenamiento)
+);
+
+
+--TABLA ESTACIONES_CARGA
+CREATE TABLE ESTACIONES_CARGA(
+cod_estaciones_carga SMALLINT NOT NULL
+
+CONSTRAINT PK_ESTACIONES_CARGA_cod_estaciones_carga PRIMARY KEY (cod_estaciones_carga)
+);
+
+--TABLA TORRE
+CREATE TABLE TORRE (
+cod_torre SMALLINT NOT NULL
+
+CONSTRAINT PK_TORRE_cod_torre PRIMARY KEY (cod_torre)
+);
+
+
+--TABLA TRANSPORTADOR
+CREATE TABLE TRANSPORTADOR(
+cod_transportador SMALLINT NOT NULL
+
+CONSTRAINT PK_TRANSPORTADOR_cod_transportador PRIMARY KEY(cod_transportador)
+);
+
+--TABLA SOPORTE
+
+CREATE TABLE SOPORTE(
+cod_soporte SMALLINT NOT NULL
+
+CONSTRAINT PK_SOPORTE_cod_soporte PRIMARY KEY(cod_soporte)
+);
+
+
+
+
+--/***RECURSOS***/
+
+--TABLA RECURSOS
+
+CREATE TABLE RECURSOS(
+identificador SMALLINT NOT NULL,
+
+);
+
+--TABLA MATERIALES
+
+
+
+
+
+
+
+
